@@ -1,0 +1,42 @@
+int n,m;
+float cost[100][100];
+const float PInf=1.e20;
+
+void citire_cost()
+{
+ int i,j,k;
+ float c;
+ cout<<"n="; cin>>n;
+ for(i=1;i<=n;i++)
+   for(j=1;j<=n;j++)
+     if(i!=j) 
+          cost[i][j]=PInf;
+ cout<<"m="; cin>>m;
+ for(k=1;k<=m;k++)
+  {
+   cin>>i>>j>>c;
+   cost[i][j]=c;
+   cost[j][i]=c; // numai pentru graf neorientat
+  }
+}
+ 
+void matr_cost()
+{
+ int i,j;
+ 
+ cout<<"Matricea costurilor: "<<endl; 
+ for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=n;j++)
+       cout<<cost[i][j]<<" ";
+    cout<<endl;
+  }
+}
+
+int main()
+{
+ citire_cost();
+ matr_cost();
+ return 0;
+}
+ 

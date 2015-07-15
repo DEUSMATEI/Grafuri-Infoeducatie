@@ -1,0 +1,35 @@
+int n,m, a[100][100];
+
+void citire()
+{
+ int i,j,k;
+ cout<<"n="; cin>>n;
+ cout<<"m="; cin>>m;
+ for(k=1;k<=m;k++)
+  {
+   cin>>i>>j;
+   a[i][j]=1;
+   a[j][i]=1; // numai pentru graf neorientat
+  }
+}
+ 
+void matr_ad()
+{
+ int i,j;
+ 
+ cout<<"Matricea de adiacenta: "<<endl; 
+ for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=n;j++)
+      cout<<a[i][j]<<" ";
+    cout<<endl;
+  }
+}
+
+int main()
+{
+ citire();
+ matr_ad();
+ return 0;
+}
+ 

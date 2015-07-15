@@ -1,0 +1,26 @@
+int a[50][50], n;
+int k, s[50];
+
+void Df(int nod)
+{
+ int i;
+ cout<<nod<<" ";
+ s[nod]=k;
+ for(i=1;i<=n;i++)
+   if(a[nod][i]==1 && s[i]==0)
+       Df(i);
+}
+
+void Comp_conexe( )  
+{
+ int i;
+ k=0;
+ for(i=1;i<=n;i++)
+   if(s[i]==0)
+     {
+       k++;
+       cout<<"Componenta "<<k<<endl;
+       Df(i);
+       cout<<endl;
+     }
+} 

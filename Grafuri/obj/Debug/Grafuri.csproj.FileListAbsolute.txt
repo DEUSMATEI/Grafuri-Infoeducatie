@@ -1,0 +1,11 @@
+D:\Infoeducatie 2015\Grafuri\Grafuri\bin\Debug\Grafuri.exe.config
+D:\Infoeducatie 2015\Grafuri\Grafuri\bin\Debug\Grafuri.exe
+D:\Infoeducatie 2015\Grafuri\Grafuri\bin\Debug\Grafuri.pdb
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.csprojResolveAssemblyReference.cache
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.Form1.resources
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.Properties.Resources.resources
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.csproj.GenerateResource.Cache
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.exe
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.pdb
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.Teorie_graf_neorientat.resources
+D:\Infoeducatie 2015\Grafuri\Grafuri\obj\Debug\Grafuri.Teste.resources

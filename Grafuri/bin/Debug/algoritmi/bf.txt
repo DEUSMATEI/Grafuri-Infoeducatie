@@ -1,0 +1,21 @@
+﻿void bf(int nod)
+{ 
+    c[i_c]=nod;
+    s[nod]=1;
+    while(i_c<=sf_c)
+     { 
+	 i=1;
+	 while(i<=n)
+	  {
+  	      if(a[c[i_c]][i]==1&&s[i]==0)
+		{
+		    sf_c++;
+		    c[sf_c]=i;
+		    s[i]=1;
+		}
+	      i++;
+	     }
+	  cout<<c[i_c]<<" ";
+	  i_c++;
+	}
+}

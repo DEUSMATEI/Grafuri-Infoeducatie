@@ -1,0 +1,62 @@
+#include<fstream.h>
+
+ifstream fin("date.in");
+ofstream fout("date.out");
+
+int a[50][50], n;
+int mdr[50][50], s[50];
+
+void Citire();
+void Df1(int baza, int nod);
+void Matr_dr();
+
+int main()
+{
+ Citire();
+ Matr_dr();
+ fout.Close();	
+ return 0;
+}
+
+void Citire()
+{
+ int i,j;
+ fin>>n;
+ while(fin>>i>>j) 
+ {
+   a[i][j]=1;
+   a[j][i]=1; //numai pentru graf neorientat
+ }
+ fin.close();
+}
+
+void Df1(int baza, int nod)
+{
+ int i;
+ if(baza!=nod) 
+      mdr[baza][nod]=1;
+ s[nod]=1;
+ for(i=1;i<=n;i++)
+   if(a[nod][i]==1 && s[i]==0)
+       Df1( baza,i);
+}
+
+void Matr_dr( )  
+{
+ int i,j;
+ for(i=1;i<=n;i++)
+   {
+    for(j=1;j<=n;j++)
+        s[j]=0;
+    Df1(i,i);
+   }
+ for(i=1;i<=n;i++)
+   {
+    for(j=1;j<=n;j++)
+       fout<<mdr[i][j]<<" ";
+    fout<<endl;
+   }
+} 
+ 
+
+ 

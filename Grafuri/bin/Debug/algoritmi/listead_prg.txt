@@ -1,0 +1,53 @@
+int n,m;
+struct Nod
+      {
+       int nd;
+       Nod* adr_urm;
+      };
+Nod* L[100];
+
+void citire()
+{
+   Nod *p;
+   int i,j,k;
+   cout<<"n="; cin>>n;
+   cout<<"m="; cin>>m;
+   for (k=1;k<=m;k++)
+   {
+     cin>>i>>j;
+     p=new Nod;
+     p->adr_urm=L[i];
+     p->nd=j;
+     L[i]=p;
+     
+     p=new Nod; //pentru graf neorientat
+     p->adr_urm=L[j];
+     p->nd=i;
+     L[j]=p;  
+   }
+} 
+
+void liste_ad()
+{
+ int i,j;
+ Nod *p;
+ cout<<"Liste de adiacenta"<<endl;
+ for(i=1;i<=n;i++)
+ {
+   p=L[i];
+   cout<<i<<":";
+   while(p)
+    {
+     cout<<p->nd<<" ";
+     p=p->adr_urm;
+    }
+    cout<<endl;
+ }
+}
+
+int main()
+{
+ citire();
+ liste_ad();
+ return 0;
+}

@@ -1,0 +1,30 @@
+int a[50][50], n;
+int mdr[50][50], s[50];
+
+void df1(int baza, int nod)
+{
+ int i;
+ if(baza!=nod) 
+      mdr[baza][nod]=1;
+ s[nod]=1;
+ for(i=1;i<=n;i++)
+   if(a[nod][i]==1 && s[i]==0)
+       df1( baza,i);
+}
+
+void matr_dr( )  
+{
+ int i,j;
+ for(i=1;i<=n;i++)
+   {
+    for(j=1;j<=n;j++)
+            s[j]=0;
+    df1(i,i);
+   }
+ for(i=1;i<=n;i++)
+   {
+    for(j=1;j<=n;j++)
+       cout<<mdr[i][j]<<" ";
+    cout<<endl;
+   }
+}   

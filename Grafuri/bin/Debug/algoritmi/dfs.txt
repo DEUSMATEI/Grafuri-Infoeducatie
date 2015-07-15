@@ -1,0 +1,9 @@
+﻿void df(int nod)
+{  
+    int i;
+    cout<<nod<<" ";
+    p[nod]=1;
+    for(i=1;i<=n;i++)
+       if(a[nod][i]==1 && p[i]==0)
+	       df(i);
+}

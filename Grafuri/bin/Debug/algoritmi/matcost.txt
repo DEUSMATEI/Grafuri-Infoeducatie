@@ -1,0 +1,13 @@
+int n,m, cost[100][100];
+
+void matr_cost()
+{
+ int i,j;
+ cout<<"Matricea costurilor:"<<endl; 
+ for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=n;j++)
+      cout<<cost[i][j]<<" ";
+    cout<<endl;
+  }
+}

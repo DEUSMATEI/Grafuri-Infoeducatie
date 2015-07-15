@@ -1,0 +1,29 @@
+  int n, k, a[100][100];
+  int succ[100], pred[100];
+
+  void T_conexe()
+  {
+    int i, j;
+    k = 0;
+    for(i=1;i<=n;i++)
+    if (succ[i] == 0)
+    { 
+       k++;
+       succ[i] = k;
+       df(i);
+       df2(i);
+       for (j = 1; j <= n; j++)
+       if (succ[j] != pred[j])
+       succ[j] = pred[j] = 0;
+                  
+     }
+     for (i=1;i<=k;i++)
+     {
+       cout<<"Componenta "<<i<<": ";
+       for(j=1;j<=n;j++)
+          if(succ[j]==i)
+                cout<<j<<" ";
+        cout<<endl;
+     } 
+          
+  }

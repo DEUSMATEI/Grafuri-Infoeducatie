@@ -1,0 +1,26 @@
+ public bool RoyFloydMax(int start, int final, int[] NV,int[,] mat, graf g)
+        {
+            gasit = false;
+            if (g.orientat == true)
+            {
+                dfciclu(start, 1, NV, g);
+            }
+            else
+                gasit = (g.M <= g.N - 1) ? true : false; //se va cauta drum in graf fara cicluri
+            if (gasit == true)
+            {    
+                int i, j, k;
+                for (i = 1; i <= g.N; i++)
+                    for (j = 1; j <= g.N; j++)
+                        if (g.GetCost(i, j) == 0 && i != j)
+                            mat[i, j] = System.Int16.MinValue;
+                        else 
+                            mat[i, j] = g.GetCost(i, j);
+                for (k = 1; k <= g.N; k++)
+                    for (i = 1; i <= g.N; i++)
+                        for (j = 1; j <= g.N; j++)
+                            if (mat[i, j] < mat[i, k] + mat[k, j])
+                                mat[i, j] = mat[i, k] + mat[k, j];  
+            }           
+            return gasit;
+        }

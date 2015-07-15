@@ -1,0 +1,33 @@
+int n, a[100][100];
+int s[100],d[100], t[100]; 
+
+void Dijkstra()
+{
+  int poz, min, i, j;
+  s[1]=1;
+  for(i=1;i<=n;i++)
+  {
+    d[i]=a[1][i];
+    if(i!=1)
+       if(d[i]<32000) t[i]=1;
+  }
+  for(i=1;i<n;i++)
+  {
+   min=32000;
+   for(j=1;j<=n;j++)
+     if(s[j]==0)
+	if(d[j]<min) 
+         {
+          min=d[j];
+	  poz=j;
+	 }
+   s[poz]=1;
+   for(j=1;j<=n;j++)
+      if(s[j]==0)
+	if(d[j]>d[poz]+a[poz][j])
+	{
+          d[j]=d[poz]+a[poz][j];
+	  t[j]=poz;
+	}
+   }
+}

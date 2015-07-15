@@ -1,0 +1,57 @@
+#incloude <iostream>
+
+using namespace std;
+
+/*
+  "m" este matricea de adiacenta  
+  "T" este un vector de tati in care se memoreaza succesorul fiecarui nod
+  "s" este un vector de vizitat
+  "a" si "b" sunt nodurile intre care verificam daca exista un lant 
+*/
+int s[50], m[50][50], n, T[50], a, b;
+
+void refac(int nod);
+void df_r (int nod); 
+
+int main()
+{
+  //citim matricea de adiacenta a grafului
+  cin>>n;
+  for(int i=1; i<=n; i++)
+    for(int j=1; j<=n; j++)
+	cin>>m[i][j];
+  //citim nodurile intre care vrificam daca exista legatura
+  cout<<"a= "; cin>>a;
+  cout<<"b= "; cin>>b;
+  
+  df_r(a);
+  // verificam daca exista legatura
+  if(T[b]!=0)
+    refac(b);
+}
+
+void refac(int nod)
+{
+   // cat timp exista drumul il afisam recursiv
+   if(nod!=0)
+    {
+        refac(T[nod]);
+	cout<<nod<<" ";
+    }
+}
+
+void df_r (int nod)
+{
+   a[nod]=1;
+   for(int i=1; i<=n; i++)
+    {
+	// verificam daca exista muchie intre nodul "nod" si nodul "i" si nodul "i"  nu a fost vizitat
+	if(m[nod][i] == 1 && s[i]==0)
+	 {
+	   //memoram in vectorul "T[i]" care este predecesorul nodului "i"
+	   T[i]=nod;
+	   // inaintam in graf
+	   df_r(i);
+	 }
+    } 
+}

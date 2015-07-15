@@ -1,0 +1,85 @@
+#include<fstream.h>
+
+ifstream fin("date.in");
+ofstream fout("date.out");
+
+int n, a[100][100];
+int s[100],d[100], t[100]; 
+
+void Citire();
+void Drum(int i);
+void Dijkstra(int start);
+void Scrie_drum(int start, int final);
+
+int main()
+{
+  int start, final;
+  Citire();
+  cout<<" nod start: "; cin>>start;
+  cout<<"nod final: ";cin>>final;
+  Dijkstra( start);
+  if(start!=final)
+     Scrie_drum(start, final);
+  fout.close();
+  return 0; 
+}
+
+void Citire()
+{
+ int i,j,cost;
+ fin>>n;
+ for(i=1;i<=n;i++)
+   for(j=1;j<=n;j++)
+      if(i!=j) a[i][j]=32000;
+
+ while(fin>>i>>j>>cost) 
+ {
+   a[i][j]=cost;
+   a[j][i]=cost; //numai pentru graf neorientat
+ }
+ fin.close();
+}
+
+void Drum( int i)
+{
+ if(t[i])
+    Drum(t[i]);
+ fout<<i<<" ":
+}
+
+void Dijkstra(int start)
+{
+	int poz, min, i, j;
+	s[start]=1;
+	for(i=1;i<=n;i++)
+	{	d[i]=a[start][i];
+		if(i!=start) if(d[i]<32000) t[i]=start;
+	}
+	for(i=1;i<n;i++)
+	{	min=32000;
+		for(j=1;j<=n;j++)
+			if(s[j]==0)
+				if(d[j]<min) { min=d[j];
+					       poz=j;
+					     }
+		s[poz]=1;
+		for(j=1;j<=n;j++)
+			if(s[j]==0)
+				if(d[j]>d[poz]+a[poz][j])
+				{	d[j]=d[poz]+a[poz][j];
+					t[j]=poz;
+				}
+	}
+}
+void Scrie_drum(int start, int final)
+{
+  
+    if(t[final] != 0)
+      {
+        fout<<"Distanta de la "<<start<<" la "<<final<<" este "<<d[i]<<endl;
+        Drum(final);
+        fout<<endl;
+      }
+     else
+        fout<<"Nu exista drum de la "<<start<<" la "<<final<<endl;
+}   
