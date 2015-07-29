@@ -65,8 +65,8 @@
             this.button_resetare_culori_graf = new System.Windows.Forms.Button();
             this.timer_pauza_animatie = new System.Windows.Forms.Timer(this.components);
             this.groupBox_startup = new System.Windows.Forms.GroupBox();
-            this.button_test = new System.Windows.Forms.Button();
             this.button_edu = new System.Windows.Forms.Button();
+            this.button_test = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -465,16 +465,6 @@
             this.groupBox_startup.TabIndex = 25;
             this.groupBox_startup.TabStop = false;
             // 
-            // button_test
-            // 
-            this.button_test.Location = new System.Drawing.Point(520, 160);
-            this.button_test.Name = "button_test";
-            this.button_test.Size = new System.Drawing.Size(221, 56);
-            this.button_test.TabIndex = 0;
-            this.button_test.Text = "Vreau sa-mi testez cunostiintele";
-            this.button_test.UseVisualStyleBackColor = true;
-            this.button_test.Click += new System.EventHandler(this.button_test_Click);
-            // 
             // button_edu
             // 
             this.button_edu.Location = new System.Drawing.Point(237, 160);
@@ -484,6 +474,16 @@
             this.button_edu.Text = "Vreau sa invat";
             this.button_edu.UseVisualStyleBackColor = true;
             this.button_edu.Click += new System.EventHandler(this.button_edu_Click);
+            // 
+            // button_test
+            // 
+            this.button_test.Location = new System.Drawing.Point(520, 160);
+            this.button_test.Name = "button_test";
+            this.button_test.Size = new System.Drawing.Size(221, 56);
+            this.button_test.TabIndex = 0;
+            this.button_test.Text = "Vreau sa-mi testez cunostiintele";
+            this.button_test.UseVisualStyleBackColor = true;
+            this.button_test.Click += new System.EventHandler(this.button_test_Click);
             // 
             // Form1
             // 
