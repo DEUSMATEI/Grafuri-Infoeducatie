@@ -65,6 +65,9 @@
             this.button_resetare_culori_graf = new System.Windows.Forms.Button();
             this.timer_pauza_animatie = new System.Windows.Forms.Timer(this.components);
             this.groupBox_startup = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_edu = new System.Windows.Forms.Button();
             this.button_test = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -72,6 +75,8 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_startup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // b_exit
@@ -88,7 +93,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Maroon;
+            this.groupBox1.BackColor = System.Drawing.Color.Crimson;
             this.groupBox1.Controls.Add(this.radio_orientat);
             this.groupBox1.Controls.Add(this.radio_neorientat);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -223,7 +228,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Maroon;
+            this.groupBox2.BackColor = System.Drawing.Color.Crimson;
             this.groupBox2.Controls.Add(this.radio_aranjare);
             this.groupBox2.Controls.Add(this.radio_Muchie);
             this.groupBox2.Controls.Add(this.radio_nod);
@@ -276,9 +281,9 @@
             // 
             // button_final
             // 
-            this.button_final.BackColor = System.Drawing.Color.Olive;
+            this.button_final.BackColor = System.Drawing.Color.MediumTurquoise;
             this.button_final.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_final.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_final.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_final.Location = new System.Drawing.Point(301, 508);
             this.button_final.Name = "button_final";
             this.button_final.Size = new System.Drawing.Size(134, 48);
@@ -290,9 +295,9 @@
             // 
             // button_stergegraf
             // 
-            this.button_stergegraf.BackColor = System.Drawing.Color.Firebrick;
+            this.button_stergegraf.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.button_stergegraf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_stergegraf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_stergegraf.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_stergegraf.Location = new System.Drawing.Point(301, 459);
             this.button_stergegraf.Name = "button_stergegraf";
             this.button_stergegraf.Size = new System.Drawing.Size(134, 48);
@@ -354,11 +359,11 @@
             // 
             // label_avertizare
             // 
-            this.label_avertizare.BackColor = System.Drawing.Color.Salmon;
+            this.label_avertizare.BackColor = System.Drawing.Color.Red;
             this.label_avertizare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label_avertizare.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label_avertizare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_avertizare.ForeColor = System.Drawing.Color.Maroon;
+            this.label_avertizare.ForeColor = System.Drawing.Color.White;
             this.label_avertizare.Location = new System.Drawing.Point(322, 33);
             this.label_avertizare.Name = "label_avertizare";
             this.label_avertizare.Size = new System.Drawing.Size(362, 48);
@@ -457,39 +462,85 @@
             // 
             // groupBox_startup
             // 
+            this.groupBox_startup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox_startup.BackgroundImage")));
+            this.groupBox_startup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox_startup.Controls.Add(this.pictureBox3);
+            this.groupBox_startup.Controls.Add(this.pictureBox2);
+            this.groupBox_startup.Controls.Add(this.button1);
             this.groupBox_startup.Controls.Add(this.button_edu);
             this.groupBox_startup.Controls.Add(this.button_test);
-            this.groupBox_startup.Location = new System.Drawing.Point(0, 73);
+            this.groupBox_startup.Location = new System.Drawing.Point(0, 27);
             this.groupBox_startup.Name = "groupBox_startup";
-            this.groupBox_startup.Size = new System.Drawing.Size(1022, 537);
+            this.groupBox_startup.Size = new System.Drawing.Size(1022, 585);
             this.groupBox_startup.TabIndex = 25;
             this.groupBox_startup.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(691, 114);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(147, 117);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(198, 114);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(147, 103);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(962, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button_edu
             // 
-            this.button_edu.Location = new System.Drawing.Point(237, 160);
+            this.button_edu.BackColor = System.Drawing.Color.Khaki;
+            this.button_edu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_edu.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.button_edu.Location = new System.Drawing.Point(131, 237);
             this.button_edu.Name = "button_edu";
-            this.button_edu.Size = new System.Drawing.Size(221, 56);
+            this.button_edu.Size = new System.Drawing.Size(260, 59);
             this.button_edu.TabIndex = 1;
             this.button_edu.Text = "Vreau sa invat";
-            this.button_edu.UseVisualStyleBackColor = true;
+            this.button_edu.UseVisualStyleBackColor = false;
             this.button_edu.Click += new System.EventHandler(this.button_edu_Click);
             // 
             // button_test
             // 
-            this.button_test.Location = new System.Drawing.Point(520, 160);
+            this.button_test.BackColor = System.Drawing.Color.Khaki;
+            this.button_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_test.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.button_test.Location = new System.Drawing.Point(622, 237);
             this.button_test.Name = "button_test";
-            this.button_test.Size = new System.Drawing.Size(221, 56);
+            this.button_test.Size = new System.Drawing.Size(272, 59);
             this.button_test.TabIndex = 0;
-            this.button_test.Text = "Vreau sa-mi testez cunostiintele";
-            this.button_test.UseVisualStyleBackColor = true;
+            this.button_test.Text = "Vreau sa-mi testez cunostintele";
+            this.button_test.UseVisualStyleBackColor = false;
             this.button_test.Click += new System.EventHandler(this.button_test_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1022, 609);
             this.Controls.Add(this.groupBox_startup);
@@ -528,6 +579,8 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_startup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,6 +625,9 @@
         private System.Windows.Forms.GroupBox groupBox_startup;
         private System.Windows.Forms.Button button_edu;
         private System.Windows.Forms.Button button_test;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

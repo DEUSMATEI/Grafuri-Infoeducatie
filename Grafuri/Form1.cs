@@ -96,7 +96,7 @@ namespace Grafuri
             private void b_exit_Click(object sender, EventArgs e)
         {
             //inchidem fereastra curenta
-            Application.Exit();
+            groupBox_startup.Visible = true;
         }
             nod[] noduri = new nod[300];
             private void button_stergegraf_Click(object sender, EventArgs e)
@@ -541,7 +541,7 @@ namespace Grafuri
                         //gr.DrawString()
                       
 
-                        MessageBox.Show("");
+                        MessageBox.Show("Pentru a inainta apasa tasta *Enter* sau *Space*");
                         
                         
                     }
@@ -756,6 +756,11 @@ namespace Grafuri
             this.Hide();
             Teste t = new Teste();
             t.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
             
     }
